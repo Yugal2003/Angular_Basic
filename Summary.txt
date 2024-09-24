@@ -1,0 +1,50 @@
+// TOPIC - 1
+
+{// standalone by default + join child comp to parent comp start
+
+first in the app folder we can create an child comp name is student with write an ng g c student and after in the student folder they are generate four files html,scss,spec.ts & ts files & after we can import StudentComponent inside an .ts file of app component inside imports objects so we can connect child to parent component & after we can style with your choice with diff comp with the help of html and scss...
+
+shortcut => selector in teacher.ts file and import in into app.html file 
+&&
+export class of TeachersComponent from teacher.ts file & import in into app.ts imports array 
+
+
+// standalone by default + join child comp to parent comp end}
+
+
+
+// TOPIC - 2
+
+// condition rendering start
+
+when you can use the condition rendering in your parent to child component so first you can write inside an app.ts file and inside we can pass some variable or data and that data we can compare inside in app.html file... with switch if and else conditions
+
+// condition rendering end
+
+
+
+// TOPIC - 3
+
+// deferrable view => @defer @error @placeholder @loading start
+
+1. @defer => means when you load the data after certain period of time so that data we can write inside an @defer{} after that data take an time to show that...
+
+2. @placeholder => when you can go to youtube page and your net will slow so youtuve screen show black page content so that page content we can also show with the help of placeholder...
+
+3. @loading => loading is mainly use for load the specific part and display some text as well...
+
+4. @error is mainly use for show error when an internet lose or network issue so they contain error text and some content to show on browser screen...
+
+
+// deferrable view => @defer @error @placeholder @loading end
+
+
+// TOPIC - 4
+
+// Trigger of Deferrable View start
+
+1.on viewport => when we can scroll on viewport then only data can show one after another (in defer)
+
+2.on hover => when we can hover on particular content then only data can show with the help of hover on defer
+
+// Trigger of Deferrable View end

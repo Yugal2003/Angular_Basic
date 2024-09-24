@@ -1,0 +1,16 @@
+h1{
+    background-color: black;
+    color: cyan;
+    padding: 1rem;
+}
+.style_whole_div{
+    display: flex;
+    justify-content:left;
+    align-items: left;
+    width: 150px;
+    text-align: left;
+    flex-direction: column;
+}
+.style_ul_div{
+    border: 1px solid black;   
+}

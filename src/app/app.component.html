@@ -6,7 +6,7 @@
 <!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
+<!-- 
 <style>
   :host {
     --bright-blue: oklch(51.01% 0.274 263.83);
@@ -322,7 +322,7 @@
       </div>
     </div>
   </div>
-</main>
+</main> -->
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
@@ -333,4 +333,89 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 
-<router-outlet />
+<!-- <router-outlet /> -->
+
+
+
+
+
+ <!-- child to parent comp start -->
+
+<div style="display: flex;flex-direction:column;justify-content: center;align-items: center;">
+
+<!-- differable start -->
+<h1>Diffrable View </h1>
+<app-item-list></app-item-list>
+
+<!-- differable end -->
+
+
+  <!-- <h1>Connect Child To Parent Comp</h1> -->
+  <!-- <app-student></app-student>
+  <app-teachers></app-teachers> -->
+
+  <!-- <button (click)="ageBelow5()">Set Age 2</button>
+  <button (click)="ageAbove5()">Set Age 7</button><br><br> -->
+
+  <!-- if condition start -->
+   <!-- @if(age > 5){
+      <div>Age Greater than 5 !</div>
+   } -->
+  <!-- if condition end -->
+
+
+
+
+  <!-- if & else condition start -->
+
+  <!-- we can also implement an button for condition rendering  -->
+
+  <!-- @if(age > 5){
+    <div>Age is : 7</div><br><br>
+  }
+  @else{
+    <div>Age is : 2</div><br><br>
+  } -->
+  <!-- if & else condition start -->
+
+
+
+  <!-- <button (click)="nameChangeYugal()">Set name as Yugal !</button>
+  <button (click)="nameChangeBhavik()">Set name as Bhavik !</button>
+  <button (click)="nameChangeOm()">Set name as Om !</button><br><br> -->
+
+  <!-- switch condition start -->
+   <!-- @switch(name){
+    @case('Yugal'){
+      <div>Hello Yugal !</div>
+    }
+    @case('Bhavik'){
+      <div>Hello Bhavik !</div>
+    }
+    @case('Om'){
+      <div>Hello Om !</div>
+    }
+   } -->
+  <!-- switch condition start -->
+
+
+  <!-- for loop start -->
+
+   <!-- @for(student of students;track student.id){
+    <div class="style_whole_div">
+      <ul>
+        <li class="style_ul_div">Id : {{student.id}} </li>
+        <li class="style_ul_div">Name : {{student.name}} </li>
+        <li class="style_ul_div">Age : {{student.age}} </li>
+      </ul>
+    </div>
+   } -->
+   <!-- if array of obj is empty then show the message -->
+   <!-- @empty{
+    <div>No Data Found !</div>
+   } -->
+
+  <!-- for loop end -->
+</div>
+
+ <!-- child to parent comp end -->

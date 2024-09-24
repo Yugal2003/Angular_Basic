@@ -1,0 +1,22 @@
+<div>
+    @for(item of items;track i;let i=$index){
+        @defer{
+            <app-item [id]="i+1" ></app-item><br/>
+        }
+        @placeholder{
+            <div class="placeholder"></div><br>
+        }
+        @loading{
+            <div class="placeholder">Loading...</div><br>
+        }
+        @error{
+            <div class="error">Error</div><br>
+        }
+}
+</div>     
+
+
+<!-- @defer (on hover) (on viewport){
+            <app-item [id]="i+1" ></app-item><br/>
+    } 
+-->
