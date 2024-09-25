@@ -2,18 +2,33 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { StudentComponent } from './student/student.component';
 import { TeachersComponent } from './teachers/teachers.component';
-import { ItemListComponent } from './item-list/item-list.component';
+import { ItemComponent } from './item/item.component';
+// import { ItemListComponent } from './item-list/item-list.component';
 
+class abc{
+  constructor(){
+    console.log("abc class called !!!");
+  }
+}
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,StudentComponent,TeachersComponent,ItemListComponent],
+  imports: [RouterOutlet,StudentComponent,TeachersComponent,ItemComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
+  viewProviders : [abc]
 })
 export class AppComponent {
   title = 'first_project';
 
+  constructor(private _abc:abc){
+    console.log("Main Class Called !!!")
+  }
+
+  // @HostListener('dblclick', ['$event'])
+  //   save(){
+  //     alert("Click On App Page !");
+  //   }
   // age = 2;
 
   // name = "Yugal"

@@ -10,5 +10,5 @@ import { ItemComponent } from '../item/item.component';
 })
 export class ItemListComponent {
 
-  items:any[] = new Array(50);
+  items:any[] = new Array(2);
 }

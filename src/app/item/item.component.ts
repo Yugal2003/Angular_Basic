@@ -8,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrl: './item.component.scss'
 })
 export class ItemComponent {
-
+    // @HostListener('click', ['$event'])
+    // save(){
+    //   alert("Click On Item Page !");
+    // }
 }

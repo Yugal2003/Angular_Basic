@@ -48,3 +48,46 @@ when you can use the condition rendering in your parent to child component so fi
 2.on hover => when we can hover on particular content then only data can show with the help of hover on defer
 
 // Trigger of Deferrable View end
+
+
+
+
+// TOPIC - 5
+
+// viewProviders start
+
+// when you have only one class component and you have to use another consturtor class inside that so you can use of viewProviders and inside write an class name like this =>
+
+import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { StudentComponent } from './student/student.component';
+import { TeachersComponent } from './teachers/teachers.component';
+import { ItemComponent } from './item/item.component';
+// import { ItemListComponent } from './item-list/item-list.component';
+
+class abc{
+  constructor(){
+    console.log("abc class called !!!");
+  }
+}
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [RouterOutlet,StudentComponent,TeachersComponent,ItemComponent],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.scss',
+  viewProviders : [abc]
+})
+export class AppComponent {
+  title = 'first_project';
+
+  constructor(private _abc:abc){
+    console.log("Main Class Called !!!")
+  }
+}
+
+
+and also you can use with another file constructor with the help of viewProviders
+
+
+// viewProviders end
