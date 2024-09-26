@@ -1,29 +1,44 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { StudentComponent } from './student/student.component';
-import { TeachersComponent } from './teachers/teachers.component';
-import { ItemComponent } from './item/item.component';
+import { StructuralDirectivesComponent } from './structural-directives/structural-directives.component';
 // import { ItemListComponent } from './item-list/item-list.component';
 
-class abc{
-  constructor(){
-    console.log("abc class called !!!");
-  }
-}
+// class abc{
+//   constructor(){
+//     console.log("abc class called !!!");
+//   }
+// }
+
+
+
+
+// <!-- app.components.ts file -->
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,StudentComponent,TeachersComponent,ItemComponent],
+  imports: [RouterOutlet,StructuralDirectivesComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
-  viewProviders : [abc]
+  // viewProviders : [abc]
 })
 export class AppComponent {
   title = 'first_project';
 
-  constructor(private _abc:abc){
-    console.log("Main Class Called !!!")
-  }
+
+
+
+
+
+
+
+
+
+
+
+
+  // constructor(private _abc:abc){
+  //   console.log("Main Class Called !!!")
+  // }
 
   // @HostListener('dblclick', ['$event'])
   //   save(){

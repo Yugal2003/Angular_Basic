@@ -1,0 +1,64 @@
+<!-- app.components.html file -->
+
+<!-- //interpolation start -->
+<!-- <div style="display: flex;flex-direction:column;justify-content: center;align-items: center;"> -->
+
+  <!-- differable start -->
+  <!-- <div class="text-center text-blue-500">
+    Hello, {{name}} <br>
+    Today Date : {{date}}<br/> -->
+  <!-- also you can use interpolation text in input type text value -->
+   <!-- <input type="text" value="{{name}}"/>
+  </div>
+  
+  <app-item></app-item> -->
+
+  <!-- always write {{}}  inside an interpolation -->
+
+<!-- //interpolation end -->
+
+
+
+<!-- app.components.html file -->
+
+<!-- //property binding start -->
+<!-- <div style="display: flex;flex-direction:column;justify-content: center;align-items: center;"> -->
+
+    <!-- differable start -->
+    <!-- <div class="text-center text-blue-500">
+      Hello, {{name}} <br>
+      Today Date : {{date}}<br/> -->
+      <!--  type key inside an [] bracket and not use {{}} interpolation hear -->
+     <!-- <input type="text" [value]="name"/>
+    </div> -->
+  
+    <!-- always write key inside [] in property binding -->
+<!-- </div> -->
+  <!-- //property binding end -->
+
+
+  <!-- //onclick event & onchange start -->
+
+    <div class="flex flex-col justify-center items-center text-center">
+        {{greeting}} To Our Page<br/>
+
+        Hello, {{name}} <br>
+
+        How Are You {{name}}!<br>
+        
+        Today Date : {{date}}<br/>
+
+        <!-- without pass [(ngModel)]="name" -->
+        <div class="flex flex-row justify-center items-center text-center ml-52">
+            <label>Name : </label>
+            <input type="text" value='{{name}}'/><br>
+        </div><br>
+        <!-- passing [(ngModel)]="name" -->
+        <div class="flex flex-row justify-center items-center text-center ml-52">
+            <label>Change Name : </label> <input type="text" [(ngModel)]="name"/><br>
+        </div><br/>
+
+        <button  class="bg-green-600 p-2 rounded-md" (click)="clickToChangeName()">Change Name to Hello</button>
+    </div>
+
+  <!-- //onclick event & onchange end -->

@@ -90,4 +90,27 @@ export class AppComponent {
 and also you can use with another file constructor with the help of viewProviders
 
 
-// viewProviders end
+// viewProviders end    
+
+
+
+
+TOPIC - 6
+
+
+// interpolation start
+
+In AngularJS, interpolation refers to the process of embedding expressions (like variables or functions) into the HTML template, which AngularJS evaluates and renders into the view dynamically. It is commonly used for displaying data from the controller in the HTML.
+
+screenshot available in assets_for_practice folder
+
+// interpolation end
+
+
+TOPIC - 7
+
+// *ngIf start
+
+screenshot available chhe
+
+// *ngIf end
