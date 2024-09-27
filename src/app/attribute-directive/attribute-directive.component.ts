@@ -41,8 +41,24 @@ export class AttributeDirectiveComponent {
 
 // when two input are same input or not start
 
-firstInput : string = ''
-secondInput : string = ''
+// firstInput : string = ''
+// secondInput : string = ''
 
 // when two input are same input or not end
+
+
+// ngStyle start
+
+
+// studentList: any[] = [
+//   {studId:12, totalMarks:23, gender:'male', name:'AAA', city: 'Pune',   isActive:  false},
+//   {studId:22, totalMarks:33, gender:'female', name:'BBB', city: 'Mumbai', isActive:  false},
+//   {studId:32, totalMarks:67, gender:'male', name:'CC', city: 'Jalgao', isActive:  true},
+//   {studId:56, totalMarks:98, gender:'female', name:'DD', city: 'Mumbai', isActive:  false},
+//   {studId:34, totalMarks:20, gender:'male', name:'EE', city: 'Nagpur', isActive:  false},
+//   {studId:76, totalMarks:50, gender:'male', name:'FFF', city: 'Thane', isActive:  true},
+// ]
+
+// ngStyle end
+
 }

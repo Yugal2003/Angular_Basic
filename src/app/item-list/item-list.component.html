@@ -1,4 +1,4 @@
-<div>
+<!-- <div>
     @for(item of items;track i;let i=$index){
         @defer{
             <app-item [id]="i+1" ></app-item><br/>
@@ -13,10 +13,16 @@
             <div class="error">Error</div><br>
         }
 }
-</div>     
+</div>      -->
 
 
 <!-- @defer (on hover) (on viewport){
             <app-item [id]="i+1" ></app-item><br/>
     } 
 -->
+
+
+<div class="flex flex-col justify-center items-center min-h-52 gap-4">
+    <h1>Welcome item-list page</h1>
+    <button class="border-2 border-black p-1 rounded-md" [routerLink]="['/Item']" routerLinkActive="router-link-active" >Go To Item Page</button>
+</div>

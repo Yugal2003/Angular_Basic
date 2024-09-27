@@ -39,11 +39,13 @@
     </ol>
 </div> -->
 
-<div>
-    <ol class="flex flex-col justify-center items-center">
+<div class="flex flex-col justify-center items-center">
+    <ol>
         <li *ngFor="let item of items">{{item}}</li>
     </ol>
-    <button class="border-2 border-black rounded-md p-1" (click)="addItem()">Add New Item</button>
-    <button class="border-2 border-black rounded-md p-1" (click)="removeItem()">Remove Item</button>
+    <div class="flex flex-row mt-4 gap-4">
+        <button class="border-2 border-black rounded-md p-1" (click)="addItem()">Add New Item</button>
+        <button class="border-2 border-black rounded-md p-1" (click)="removeItem()">Remove Item</button>
+    </div>
 </div>
 <!-- ngfor directives start -->

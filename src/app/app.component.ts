@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { AttributeDirectiveComponent } from './attribute-directive/attribute-directive.component';
+import { RouterLink, RouterOutlet } from '@angular/router';
+import { NavbarComponent } from './navbar/navbar.component';
 // import { ItemListComponent } from './item-list/item-list.component';
 
 // class abc{
@@ -16,7 +16,7 @@ import { AttributeDirectiveComponent } from './attribute-directive/attribute-dir
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,AttributeDirectiveComponent],
+  imports: [RouterOutlet, RouterLink, NavbarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   // viewProviders : [abc]

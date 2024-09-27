@@ -1,4 +1,4 @@
-<div>
+<div class="mt-8 flex flex-col justify-center items-center">
     <h1>Welcome Attributes Directive Page !</h1>
 </div>
 
@@ -35,10 +35,10 @@
 <!-- // when two input are same input or not start -->
 
 <!-- we can change bgcolor and hide/show div also -->
- 
+
 <!-- [ngClass]="firstInput === secondInput ? 'isVisible' : 'hidden'" -->
 
-<div [ngClass]="firstInput === secondInput ? 'bg-blue-600' : 'bg-red-600' " class="mt-8 border-2 border-black w-96 h-48 flex flex-row justify-center text-center items-center rounded-xl">
+<!-- <div [ngClass]="firstInput === secondInput ? 'bg-blue-600' : 'bg-red-600' " class="mt-8 border-2 border-black w-96 h-48 flex flex-row justify-center text-center items-center rounded-xl">
     <h2 class="font-extrabold ">Enter Same Text to Show an Div !</h2>
 </div>
 
@@ -47,6 +47,34 @@
     <input [(ngModel)]="firstInput" class="w-36 border-black border-2" type="text"/>
     <label>Enter Text :</label>
     <input [(ngModel)]="secondInput" class="w-36 border-black border-2" type="text"/>
-</div>
+</div> -->
 
 <!-- // when two input are same input or not end -->
+
+
+<!-- // ngStyle start -->
+
+<!-- <div class="flex flex-col p-2 text-center justify-center items-center">
+    <table [ngStyle]="{'background-color':'cyan'}">
+        <thead>
+            <tr class="border-2 border-black">
+                <th>Name</th>
+                <th>City</th>
+                <th>Status</th>
+                <th>Gender</th>
+                <th>Total Mark</th>
+            </tr>
+        </thead>
+        <tbody [ngStyle]="{'background-color':'Yellow'}">
+            <tr class="border-2 border-black" *ngFor="let stud of studentList">
+                <td>{{stud.name}}</td>
+                <td>{{stud.city}}</td>
+                <td [ngStyle]="{'background-color':stud.isActive ? 'Blue' : 'Red','color':'white','padding' : '0.5rem'}">{{stud.isActive ? 'Active' : 'InActive'}}</td>
+                <td>{{stud.gender}}</td>
+                <td>{{stud.totalMarks}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div> -->
+
+<!-- // ngStyle end -->
