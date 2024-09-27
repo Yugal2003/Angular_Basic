@@ -31,9 +31,19 @@
 <!-- //show and hide div1 end -->
 
 
+ <!-- ngfor directives start -->
 
-<div>
+<!-- <div>
     <ol style="list-style-type:square;">
         <li *ngFor="let city of cityArray">{{city}}</li>
     </ol>
+</div> -->
+
+<div>
+    <ol class="flex flex-col justify-center items-center">
+        <li *ngFor="let item of items">{{item}}</li>
+    </ol>
+    <button class="border-2 border-black rounded-md p-1" (click)="addItem()">Add New Item</button>
+    <button class="border-2 border-black rounded-md p-1" (click)="removeItem()">Remove Item</button>
 </div>
+<!-- ngfor directives start -->

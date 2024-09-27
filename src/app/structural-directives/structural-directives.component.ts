@@ -20,6 +20,18 @@ export class StructuralDirectivesComponent {
   // isValue1 : string = "";
   // isValue2 : string = "";
   
+  //  ngfor directives start
   cityArray:string[] = ['Pune','Surat','Bangalore'];
-  
+
+  items: string[] = ['Item 1', 'Item 2', 'Item 3'];
+
+  addItem(){
+    this.items.push(`Item ${this.items.length + 1}`);
+  }
+  removeItem(){
+    if(this.items.length > 0){
+      this.items.pop();
+    }
+  }
+  //  ngfor directives end
 }

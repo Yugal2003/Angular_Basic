@@ -1,0 +1,52 @@
+<div>
+    <h1>Welcome Attributes Directive Page !</h1>
+</div>
+
+<!-- // two or more color changes start-->
+
+<!-- <div (click)="clickToChangeDivColorBlack()" [ngClass]="divColor" class="mt-8 border-2 border-black w-96 h-48 flex flex-col justify-center items-center rounded-xl">
+    <h2 class="text-white font-extrabold">Change Color of Div to Click On Button!</h2>
+</div>
+
+<div class="gap-4 mt-4 flex flex-row justify-center items-center">
+    <button (click)="clickToChangeDivColorRed()" class="border-black border-2 p-1 rounded-md bg-red-600 w-16">Red</button>
+    <button (click)="clickToChangeDivColorBlue()" class="border-black border-2 p-1 rounded-md bg-blue-600 w-16">Blue</button>
+    <button (click)="clickToChangeDivColorYellow()" class="border-black border-2 p-1 rounded-md bg-yellow-600 w-16">Yellow</button>
+</div> -->
+
+<!-- // two or more color changes end-->
+
+
+<!-- toggle in ngclass start -->
+
+<!-- <div class="mt-8 border-2 border-black w-96 h-48 flex flex-col justify-center items-center rounded-xl">
+    <h2 class="text-white font-extrabold">Change Color of Div to Click On Button!</h2>
+</div>
+
+<div>
+    <button (click)="divColor = !divColor" class="border-black border-2 p-1 rounded-md w-36 ml-24 mt-4" [ngClass]="divColor ? 'bg-blue-600' : 'bg-red-600'">Toggle Color</button>
+</div> -->
+
+<!-- toggle in ngclass end -->
+
+
+
+
+<!-- // when two input are same input or not start -->
+
+<!-- we can change bgcolor and hide/show div also -->
+ 
+<!-- [ngClass]="firstInput === secondInput ? 'isVisible' : 'hidden'" -->
+
+<div [ngClass]="firstInput === secondInput ? 'bg-blue-600' : 'bg-red-600' " class="mt-8 border-2 border-black w-96 h-48 flex flex-row justify-center text-center items-center rounded-xl">
+    <h2 class="font-extrabold ">Enter Same Text to Show an Div !</h2>
+</div>
+
+<div class="mt-4">
+    <label>Enter Text :</label>
+    <input [(ngModel)]="firstInput" class="w-36 border-black border-2" type="text"/>
+    <label>Enter Text :</label>
+    <input [(ngModel)]="secondInput" class="w-36 border-black border-2" type="text"/>
+</div>
+
+<!-- // when two input are same input or not end -->
