@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
+import { TemplateFormsComponent } from './forms/template-forms/template-forms.component';
 // import { ItemListComponent } from './item-list/item-list.component';
 
 // class abc{
@@ -16,7 +17,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, RouterLink, NavbarComponent],
+  imports: [RouterOutlet,TemplateFormsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   // viewProviders : [abc]
@@ -49,7 +50,7 @@ export class AppComponent {
   // name = "Yugal"
 
 
-  // for if else 
+  // for if else
   // ageBelow5(){
   //   this.age = 2
   // }

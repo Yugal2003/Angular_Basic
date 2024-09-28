@@ -1,0 +1,174 @@
+<!-- <div class="text-center flex flex-col justify-center items-center min-h-24">
+  <div>
+    <h1>Welcome To Template Form </h1>
+  </div> -->
+  <!-- <div>
+    <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)" class="space-y-4"> -->
+
+      <!-- First Name -->
+      <!-- <div>
+        <label for="firstname">First Name:</label>
+        <input autocomplete="off" type="text" id="firstname" name="firstname" minlength="3" #fname="ngModel" [(ngModel)]="user.firstname" required class="border-2 border-black p-2">
+      </div>
+      <div>
+        @if((fname.dirty || fname.touched) && fname.errors?.['required']){
+          <span class="text-red-600 text-lg font-bold">*Field Are Required !</span>
+        }
+        @else if((fname.dirty || fname.touched) && fname.errors?.['minlength']){
+          <span class="text-red-600 text-lg font-bold">*Min 3 Character Are Required !</span>
+        }
+      </div> -->
+      <!-- Last Name -->
+      <!-- <div>
+        <label for="lastname">Last Name:</label>
+        <input autocomplete="off" type="text" id="lastname" name="lastname" minlength="3" #lname="ngModel" [(ngModel)]="user.lastname" required class="border-2 border-black p-2">
+      </div>
+      <div>
+        @if((lname.dirty || lname.touched) && lname.errors?.['required']){
+          <span class="text-red-600 text-lg font-bold">*Field Are Required !</span>
+        }
+        @else if((lname.dirty || lname.touched) && lname.errors?.['minlength']){
+          <span class="text-red-600 text-lg font-bold">*Min 3 Character Are Required !</span>
+        }
+      </div> -->
+      <!-- Age -->
+      <!-- <div>
+        <label for="age">Age:</label>
+        <input autocomplete="off" type="number" id="age" name="age" #uage="ngModel" [(ngModel)]="user.age" required min="0" class="border-2 border-black p-2">
+      </div>
+      <div>
+        @if((uage.touched || uage.dirty) && uage.errors?.['required']){
+          <span class="text-red-600 text-lg font-bold">*Field Are Required !</span>
+        }
+      </div> -->
+      <!-- Address -->
+      <!-- <div>
+        <label for="address">Address:</label>
+        <textarea autocomplete="off" id="address" name="address" #add="ngModel" minlength="5" [(ngModel)]="user.address" required class="border-2 border-black p-2"></textarea>
+      </div>
+      <div>
+        @if((add.dirty || add.touched) && add.errors?.['required']){
+          <span class="text-red-600 text-lg font-bold">*Field Are Required !</span>
+        }
+        @else if((add.dirty || add.touched) && add.errors?.['minlength']){
+          <span class="text-red-600 text-lg font-bold">*Min 5 Character Are Required !</span>
+        }
+      </div> -->
+      <!-- City -->
+      <!-- <div>
+        <label for="city">City:</label>
+        <select id="city" name="city" #sel="ngModel" [(ngModel)]="user.city" required class="border-2 border-black p-2">
+          <option value="" disabled>Select City</option>
+          <option *ngFor="let city of cities" [value]="city">{{city}}</option>
+        </select>
+      </div> -->
+      <!-- <div>
+        @if((sel.dirty || sel.touched) && sel.errors?.['required']){
+          <span class="text-red-600 text-lg font-bold">*Field Are Required !</span>
+        }
+      </div> -->
+      <!-- Gender -->
+      <!-- <div>
+        <label>Gender:</label>
+        <label><input type="radio" #gen="ngModel" name="gender" value="Male" [(ngModel)]="user.gender" required> Male</label>
+        <label><input type="radio" #gen="ngModel"  name="gender" value="Female" [(ngModel)]="user.gender" required> Female</label>
+      </div>
+      <div>
+        @if((gen.dirty || gen.touched) && gen.errors?.['required']){
+          <span class="text-red-600 text-lg font-bold">*Field Are Required !</span>
+        }
+      </div> -->
+      <!-- Submit Button -->
+      <!-- <button type="submit" class="border-2 border-black p-2" [disabled]="userForm.invalid">Submit</button>
+    </form>
+  </div>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--  correct code for ChatGPT start -->
+
+<div class="text-center flex flex-col justify-center items-center min-h-24">
+  <div>
+    <h1>Welcome To Template Form</h1>
+  </div>
+  <div>
+    <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)" class="space-y-4">
+
+      <!-- First Name -->
+      <div>
+        <label for="firstname">First Name:</label>
+        <input autocomplete="off" type="text" id="firstname" name="firstname" minlength="3" #fname="ngModel" [(ngModel)]="user.firstname" required class="border-2 border-black p-2">
+      </div>
+      <div *ngIf="(fname.dirty || fname.touched) && fname.errors">
+        <span *ngIf="fname.errors?.['required']" class="text-red-600 text-lg font-bold">*Field Are Required!</span>
+        <span *ngIf="fname.errors?.['minlength']" class="text-red-600 text-lg font-bold">*Min 3 Characters Required!</span>
+      </div>
+
+      <!-- Last Name -->
+      <div>
+        <label for="lastname">Last Name:</label>
+        <input autocomplete="off" type="text" id="lastname" name="lastname" minlength="3" #lname="ngModel" [(ngModel)]="user.lastname" required class="border-2 border-black p-2">
+      </div>
+      <div *ngIf="(lname.dirty || lname.touched) && lname.errors">
+        <span *ngIf="lname.errors?.['required']" class="text-red-600 text-lg font-bold">*Field Are Required!</span>
+        <span *ngIf="lname.errors?.['minlength']" class="text-red-600 text-lg font-bold">*Min 3 Characters Required!</span>
+      </div>
+
+      <!-- Age -->
+      <div>
+        <label for="age">Age:</label>
+        <input autocomplete="off" type="number" id="age" name="age" #uage="ngModel" [(ngModel)]="user.age" required min="0" class="border-2 border-black p-2">
+      </div>
+      <div *ngIf="(uage.dirty || uage.touched) && uage.errors">
+        <span *ngIf="uage.errors?.['required']" class="text-red-600 text-lg font-bold">*Field Are Required!</span>
+      </div>
+
+      <!-- Address -->
+      <div>
+        <label for="address">Address:</label>
+        <textarea autocomplete="off" id="address" name="address" minlength="5" #add="ngModel" [(ngModel)]="user.address" required class="border-2 border-black p-2"></textarea>
+      </div>
+      <div *ngIf="(add.dirty || add.touched) && add.errors">
+        <span *ngIf="add.errors?.['required']" class="text-red-600 text-lg font-bold">*Field Are Required!</span>
+        <span *ngIf="add.errors?.['minlength']" class="text-red-600 text-lg font-bold">*Min 5 Characters Required!</span>
+      </div>
+
+      <!-- City -->
+      <div>
+        <label for="city">City:</label>
+        <select id="city" name="city" #sel="ngModel" [(ngModel)]="user.city" required class="border-2 border-black p-2">
+          <option value="" disabled>Select City</option>
+          <option *ngFor="let city of cities" [value]="city">{{city}}</option>
+        </select>
+      </div>
+      <div *ngIf="(sel.dirty || sel.touched) && sel.errors">
+        <span *ngIf="sel.errors?.['required']" class="text-red-600 text-lg font-bold">*Field Are Required!</span>
+      </div>
+
+      <!-- Gender -->
+      <div>
+        <label>Gender:</label>
+        <label><input type="radio" #gen="ngModel" name="gender" value="Male" [(ngModel)]="user.gender" required> Male</label>
+        <label><input type="radio" #gen="ngModel" name="gender" value="Female" [(ngModel)]="user.gender" required> Female</label>
+      </div>
+      <div *ngIf="(gen.dirty || gen.touched) && gen.errors">
+        <span *ngIf="gen.errors?.['required']" class="text-red-600 text-lg font-bold">*Field Are Required!</span>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="border-2 border-black p-2" [disabled]="userForm.invalid">Submit</button>
+    </form>
+  </div>
+</div>

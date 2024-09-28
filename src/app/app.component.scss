@@ -12,5 +12,20 @@
 //     flex-direction: column;
 // }
 // .style_ul_div{
-//     border: 1px solid black;   
+//     border: 1px solid black;
 // }
+
+
+.space-y-4 {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+input, textarea, select {
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
