@@ -3,6 +3,8 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
 import { TemplateFormsComponent } from './forms/template-forms/template-forms.component';
 import { ReactiveformsComponent } from './forms/reactiveforms/reactiveforms.component';
+import { GetAPIComponent } from './httpsApiIntegration/get-api/get-api.component';
+import { PostAPIComponent } from './httpsApiIntegration/post-api/post-api.component';
 // import { ItemListComponent } from './item-list/item-list.component';
 
 // class abc{
@@ -18,7 +20,7 @@ import { ReactiveformsComponent } from './forms/reactiveforms/reactiveforms.comp
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,ReactiveformsComponent],
+  imports: [RouterOutlet,PostAPIComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   // viewProviders : [abc]

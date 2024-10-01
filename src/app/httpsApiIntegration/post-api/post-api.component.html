@@ -1,0 +1,66 @@
+<div class="justify-center items-center flex flex-col">
+    <h1>Welcome To Post API Page!</h1>
+  
+    <form class="flex flex-col">
+      <label>Title:</label>
+      <input class="in" [(ngModel)]="productObj.title" name="title" type="text" placeholder="Enter title" />
+      
+      <label>Price:</label>
+      <input class="in" [(ngModel)]="productObj.price" name="price" type="text" placeholder="Enter price" />
+      
+      <label>Description:</label>
+      <input class="in" [(ngModel)]="productObj.description" name="description" type="text" placeholder="Enter description" />
+      
+      <label>Category:</label>
+      <input class="in" [(ngModel)]="productObj.category" name="category" type="text" placeholder="Enter category" />
+    </form>
+  
+    <button (click)="onSave()" class="border-2 border-black p-1 rounded-md">
+      Save Product
+    </button>
+  </div>
+  
+  
+  <!-- <div class="justify-center items-center flex flex-col">
+    <ul *ngFor="let item of productData">
+      <li>
+        <p><strong>Id:</strong> {{item.id}}</p>
+        <p><strong>Title:</strong> {{item.title}}</p>
+        <p><strong>Price:</strong> ${{item.price}}</p>
+        <p><strong>Description:</strong> {{item.description}}</p>
+        <p><strong>Category:</strong> {{item.category}}</p>
+      </li>
+    </ul>
+  </div> -->
+
+<div class="flex flex-col justify-center items-center gap-4">
+  <table>
+    <thead>
+        <tr>
+            <th>No</th>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Description</th>
+            <th>Category</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @for (item of productData; track $index) {
+        <tr>
+            <td>{{item.id}}</td>
+            <td>{{item.title}}</td>
+            <td>{{item.price}}</td>
+            <td>{{item.description.substring(0,35)}}</td>
+            <td>{{item.category}}</td>
+            <td><button class="ml-4 border-2 border-black p-1 rounded-md my-2" (click)="onEdit(item)">Edit</button></td>
+        </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <td></td>
+        </tr>
+    </tfoot>
+  </table>
+</div>

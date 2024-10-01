@@ -1,0 +1,26 @@
+<!-- first go to summary.txt file and show topic - 8 -->
+
+<div>
+    <h1>Welcome To Get API Page!</h1>
+  
+    <button class="border-2 border-black p-1 rounded-md" (click)="fetchAllUser()">Click To Fetch Data</button>
+  
+    <!-- Display the list of products -->
+    <div *ngIf="productList.length !== []; else noDataTemplate">
+      <ul>
+        <li *ngFor="let product of productList" class="border p-2 mb-2">
+          <h3>{{ product.id }}</h3>
+          <h3>{{ product.title }}</h3>
+          <img class="w-12 h-12" [src]="product.image" alt="{{ product.title }}">
+          <p>Price: ${{ product.price }}</p>
+          <p>Description: {{ product.description.substring(0,30) }}</p>
+        </li>
+      </ul>
+    </div>
+  
+    <!-- Template to show when there's no data -->
+    <ng-template #noDataTemplate>
+      <p>No products available yet. Click the button to fetch data.</p>
+    </ng-template>
+  </div>
+  

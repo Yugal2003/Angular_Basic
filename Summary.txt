@@ -114,3 +114,17 @@ TOPIC - 7
 screenshot available chhe
 
 // *ngIf end
+
+
+
+
+//TOPIC - 8
+// screenshot available
+
+// https get api start
+
+step - 1 => go to app.config.js file and inside write an provideHttpClient()
+step - 2 => after we can write some logic code inside an getApicomp.ts file 
+step - 3 => after fetch api we can show the data inside an getApicomp.html file with the help of ngFor loop
+
+// https get api end
