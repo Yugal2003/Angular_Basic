@@ -1,0 +1,80 @@
+
+
+<div class="text-center flex flex-col justify-center items-center min-h-24">
+    <div>
+      <h1>Welcome To Template Form</h1>
+    </div>
+    <div  [formGroup]="studentForm">
+      <form class="space-y-4" class="items-center">
+  
+        <!-- First Name -->
+        <div>
+          <label for="firstname">First Name<span class="text-red-600">*</span>:</label>
+          <input placeholder="Enter Your FirstName" type="text" id="firstname" class="border-2 border-black p-2" formControlName="FirstName">
+        </div> 
+        @if(studentForm.controls['FirstName'].touched && studentForm.controls['FirstName'].errors?.['required']){
+          <span class="text-red-600 text-sm font-bold">*Field Are Required!</span>
+        }
+        @else if(studentForm.controls['FirstName'].touched && studentForm.controls['FirstName'].errors?.['minlength']){
+         <span class="text-red-600 text-sm font-bold">*Min 3 Characters Required!</span>
+        }
+          
+  
+        <!-- Last Name -->
+        <div>
+          <label for="lastname">Last Name<span class="text-red-600">*</span>:</label>
+          <input placeholder="Enter Your LastName" type="text" id="lastname" class="border-2 border-black p-2" formControlName="LastName">
+        </div>
+        @if(studentForm.controls['LastName'].touched && studentForm.controls['LastName'].errors?.['required']){
+          <span class="text-red-600 text-sm font-bold">*Field Are Required!</span>
+        }
+        @else if(studentForm.controls['LastName'].touched && studentForm.controls['LastName'].errors?.['minlength']){
+          <span class="text-red-600 text-sm font-bold">*Min 3 Characters Required!</span>
+        }
+  
+        <!-- Age -->
+        <div>
+          <label for="age">Age:</label>
+          <input placeholder="Enter Your Age" type="number" id="age" min="0" class="border-2 border-black p-2" formControlName="Age">
+        </div>
+  
+        <!-- Address -->
+        <div>
+          <label for="address">Address:</label>
+          <textarea placeholder="Enter Your Address" id="address" class="border-2 border-black p-2" formControlName="Address"></textarea>
+        </div>
+  
+        <!-- email -->
+        <div>
+          <label id="email">Email<span class="text-red-600">*</span>:</label>
+          <input class="border-2 border-black p-2"  name="email" type="email" placeholder="Enter Your Email"formControlName="Email"/>
+        </div>
+        @if(studentForm.controls['Email'].touched && studentForm.controls['Email'].errors?.['required']){
+          <span class="text-red-600 text-sm font-bold">*Field Are Required!</span>
+        }
+        @else if(studentForm.controls['Email'].touched && studentForm.controls['Email'].errors?.['email']){
+            <span class="text-red-600 text-sm font-bold">*Email Not Correct!</span>
+        }
+
+        <!-- password -->
+        <div id="password">
+          <label id="password">Password<span class="text-red-600">*</span>:</label>
+          <input class="border-2 border-black p-2"  type="password" name="password" placeholder="Enter Your Password" formControlName="Password"/>
+        </div>
+        @if(studentForm.controls['Password'].touched && studentForm.controls['Password'].errors?.['required']){
+          <span class="text-red-600 text-sm font-bold">*Field Are Required!</span>
+        }
+        @else if(studentForm.controls['Password'].touched && studentForm.controls['Password'].errors?.['minlength']){
+            <span class="text-red-600 text-sm font-bold">*Type Min 8 Characters!</span>
+        }
+
+        <!-- Submit Button -->
+        <button type="submit" class="border-2 border-black p-2" [disabled]="studentForm.invalid" class="bg-blue-500 p-2 rounded-md" (click)="onsubmit()">Submit</button>
+      </form>
+    </div>
+</div>
+
+<div>
+    {{formValues | json}}
+</div>
+  

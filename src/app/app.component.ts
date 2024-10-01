@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
 import { TemplateFormsComponent } from './forms/template-forms/template-forms.component';
+import { ReactiveformsComponent } from './forms/reactiveforms/reactiveforms.component';
 // import { ItemListComponent } from './item-list/item-list.component';
 
 // class abc{
@@ -17,7 +18,7 @@ import { TemplateFormsComponent } from './forms/template-forms/template-forms.co
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,TemplateFormsComponent],
+  imports: [RouterOutlet,ReactiveformsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   // viewProviders : [abc]
