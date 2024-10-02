@@ -6,7 +6,7 @@
     <button class="border-2 border-black p-1 rounded-md" (click)="fetchAllUser()">Click To Fetch Data</button>
   
     <!-- Display the list of products -->
-    <div *ngIf="productList.length !== []; else noDataTemplate">
+    <div *ngIf="productList.length !== []">
       <ul>
         <li *ngFor="let product of productList" class="border p-2 mb-2">
           <h3>{{ product.id }}</h3>
@@ -19,8 +19,8 @@
     </div>
   
     <!-- Template to show when there's no data -->
-    <ng-template #noDataTemplate>
+    <!-- <ng-template #noDataTemplate>
       <p>No products available yet. Click the button to fetch data.</p>
-    </ng-template>
+    </ng-template> -->
   </div>
   

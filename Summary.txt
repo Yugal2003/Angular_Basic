@@ -128,3 +128,16 @@ step - 2 => after we can write some logic code inside an getApicomp.ts file
 step - 3 => after fetch api we can show the data inside an getApicomp.html file with the help of ngFor loop
 
 // https get api end
+
+
+//TOPIC - 9
+// screenshot available
+
+// https crud operation start
+
+step - 1 => go to app.config.js file and inside write an provideHttpClient()
+step - 2 => after we can write some logic code inside an postApicomp.ts file 
+step - 3 => after we can implements crud operation inside an postApicomp.html file with the help of postApicomp.ts files
+
+
+// https crud operation end
